@@ -5,6 +5,15 @@ import './App.css'
 
 const secret = import.meta.env.VITE_REACT_APP_API_KEY
 
+const options = {
+   method: "GET",
+   headers: {
+       "Authorization":  secret,
+       "Content-Type": 'application/json'
+   },
+  
+}
+
 
 function App() {
   
@@ -12,13 +21,16 @@ function App() {
   
   useEffect(() => {
   
-    fetch(`https://youtube.googleapis.com/youtube/v3/search?key=${secret}`)
+    fetch(`https://youtube.googleapis.com/youtube/v3/videos?key=${secret}`)
         .then(r => r.json())
         .then(arr => setAllVideos(arr))
         .catch(err => console.log(err))
   },[])
   
   test(allVideos)
+  
+  
+
 
   return (
     
