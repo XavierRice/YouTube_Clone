@@ -4,30 +4,31 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import './App.css'
 
 const secret = import.meta.env.VITE_REACT_APP_API_KEY
+const search = "beyonce"
 
 const options = {
    method: "GET",
    headers: {
-       "Authorization":  secret,
-       "Content-Type": 'application/json'
+       "Authorization": `Bearer ${secret}`,
    },
-  
-}
+};
 
 
 function App() {
+                                                // our default could be Bey or just and empty string
+  const [searchKey, setSearchKey] = useState("Beyoncé")
   
   const [ allVideos, setAllVideos] = useState([])
   
   useEffect(() => {
   
-    fetch(`https://youtube.googleapis.com/youtube/v3/videos?key=${secret}`)
+    fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${searchKey}&type=video&key=${secret} `)
         .then(r => r.json())
-        .then(arr => setAllVideos(arr))
+        .then(data => console.log(data))
         .catch(err => console.log(err))
-  },[])
+  },[searchKey])
   
-  test(allVideos)
+  test( "This is the Search:", searchKey, "And this is what we get:" , allVideos)
   
   
 
