@@ -1,12 +1,22 @@
+import VideoCards from "./VideoCards.jsx"
 
+const VideoMaker = ({allVideos, searchKey}) => {
+const videoItems = allVideos?.items || [];
 
-const VideoMaker = ({allVideos}) => {
-console.log(allVideos.items)
+const VideoToRender = videoItems.map( video =>{
+
+    return(
+        <VideoCards video={video}/>
+    )
+
+})
+
 
 return (
-
-   <h1>ME</h1>
-
+   <>
+   <h1>{searchKey}</h1>
+   {VideoToRender}
+   </>
 )
 
 

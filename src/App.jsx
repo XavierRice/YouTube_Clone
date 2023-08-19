@@ -1,5 +1,6 @@
 const test = console.log
 const secret = import.meta.env.VITE_REACT_APP_API_KEY
+
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import './App.css'
@@ -22,7 +23,7 @@ import VideoMaker from './Components/VideoMaker.jsx';
 
 function App() {
                                                 // our default could be Bey or just and empty string
-  const [searchKey, setSearchKey] = useState("Beyonce")
+  const [searchKey, setSearchKey] = useState("Tina+Turner")
   const [results, setResults] = useState([]);
   const [ allVideos, setAllVideos] = useState([])
   
@@ -36,13 +37,13 @@ function App() {
   
   test( "This is the Search:", searchKey, "And this is what we get:" , allVideos)
   
-  test(allVideos.items)
+  
 
 
   return(
     <div className="App">
-        <h1>Hi X</h1>
-        <VideoMaker allVideos={allVideos}/>
+        <h1>Hi Team</h1>
+       
     </div>
   )
 }
@@ -59,6 +60,7 @@ export default App
         <SearchResultsList results={results}/>
       </div>
 
+ <VideoMaker allVideos={allVideos} searchKey={searchKey}/>
 
 
 
