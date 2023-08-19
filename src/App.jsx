@@ -16,7 +16,7 @@ const options = {
 
 function App() {
                                                 // our default could be Bey or just and empty string
-  const [searchKey, setSearchKey] = useState("Beyoncé")
+  const [searchKey, setSearchKey] = useState("Tina-Turner")
   
   const [ allVideos, setAllVideos] = useState([])
   
@@ -24,13 +24,18 @@ function App() {
   
     fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${searchKey}&type=video&key=${secret} `)
         .then(r => r.json())
-        .then(data => console.log(data))
+        .then(data => setAllVideos(data))
         .catch(err => console.log(err))
   },[searchKey])
   
-  test( "This is the Search:", searchKey, "And this is what we get:" , allVideos)
+  test(allVideos)
   
   
+
+
+
+
+
 
 
   return (
