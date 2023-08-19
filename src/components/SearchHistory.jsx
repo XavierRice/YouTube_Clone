@@ -1,6 +1,9 @@
 import React from 'react'
 import "./SearchHistory.css";
-export const SearchHistory = {(result)} => {
+
+
+
+ const SearchHistory = ({result}) => {
   return (
     <div 
     className="history-result" 
@@ -10,3 +13,5 @@ export const SearchHistory = {(result)} => {
     </div>
   );
 };
+
+export default SearchHistory;
