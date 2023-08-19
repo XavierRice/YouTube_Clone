@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Searchbar from '../Components/Searchbar';
 import './App.css'
 
 
@@ -8,10 +9,14 @@ import './App.css'
 
 function App() {
 
-
   return (
-    
-     <h1>Let's go Team!!</h1>
+
+    <div className="App">
+      <div className="searchbar-container">
+        <Searchbar />
+        <div className="">SearchResults</div>
+      </div>
+    </div>
   )
 }
 

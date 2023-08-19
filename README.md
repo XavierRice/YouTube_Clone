@@ -25,6 +25,11 @@ The link to my project board is: https://trello.com/b/hmXK544f/student-dashboard
 
 5. Access the app in your browser at `http://localhost:3000` (Subject to change based on running npm run dev).
 
+
+## Dependencies
+
+1. npm install react-icons --save
+
 ## Usage
 
 1. Select a cohort from the dropdown menu to view students from that cohort.
