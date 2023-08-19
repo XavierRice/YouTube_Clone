@@ -1,17 +1,16 @@
-import { useState } from "react";
-import { useNavigate as navigate } from "react-router-dom";
+
+import { useNavigate } from "react-router-dom";
 
 
 const VideoCards = ({video}) => {
+  const navigate = useNavigate()
 
   const routeChanger = () => {
      let path = "newPath"
-     navigate(path)
+     let props = { video: video }
+     navigate(path, props )
   }
 
-
-   const [showMore, setShowMore] = useState(false)
-    
 
   return (
       <>

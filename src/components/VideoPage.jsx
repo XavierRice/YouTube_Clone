@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { useNavigate as navigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 
-const VideoPage = (props) => {
+const VideoPage = ({video}) => {
+   
+   const location = useLocation();
 
    const [comment, setComment] = useState("");
    const [name, setName] = useState("")
