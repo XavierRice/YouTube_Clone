@@ -10,6 +10,7 @@ import './App.css'
 //COMPONENTS///
 import VideoMaker from './Components/VideoMaker.jsx';
 import SearchBar from './Components/SearchBar.jsx';
+import Footer from './Components/Footer.jsx';
 //import { SearchHistoryList } from './components/SearchHistoryList.jsx';
 
 
@@ -44,6 +45,7 @@ function App() {
   return(
     <div className="App">
         <h1>Hi Team</h1>
+        <Footer/>
     </div>
   )
 };

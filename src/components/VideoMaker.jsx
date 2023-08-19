@@ -1,23 +1,26 @@
 import VideoCards from "./VideoCards.jsx"
 
-const VideoMaker = ({allVideos, searchKey}) => {
-const videoItems = allVideos?.items || [];
+const VideoMaker = ({ allVideos, searchKey }) => {
+    const videoItems = allVideos?.items || [];
 
-const VideoToRender = videoItems.map( video =>{
+    const VideoToRender = videoItems.map(video => {
 
-    return(
-        <VideoCards video={video}/>
+        return (
+            <div className="card-group">
+                <VideoCards video={video} />
+            </div>
+        )
+
+    })
+
+
+    return (
+
+        <div className="row row-cols-3">
+            <h1>{searchKey}</h1>
+            {VideoToRender}
+        </div>
     )
-
-})
-
-
-return (
-   <>
-   <h1>{searchKey}</h1>
-   {VideoToRender}
-   </>
-)
 
 
 
