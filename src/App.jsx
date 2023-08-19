@@ -8,7 +8,7 @@ import './App.css'
 
 function App() {
 
-
+console.log({secret})
   return (
     
      <h1>Let's go Team!!</h1>
