@@ -1,6 +1,14 @@
 import { useState } from "react";
+import { useNavigate as navigate } from "react-router-dom";
+
 
 const VideoCards = ({video}) => {
+
+  const routeChanger = () => {
+     let path = "newPath"
+     navigate(path)
+  }
+
 
    const [showMore, setShowMore] = useState(false)
     
@@ -13,23 +21,9 @@ const VideoCards = ({video}) => {
       <h5 className="card-title">{video.snippet.title}</h5>
       <p className="card-text">{video.snippet.description}</p>
       </div>
-      <a herf="#" className="btn btn-primary" onClick={() => setShowMore(!showMore)}>Show More</a>
+      <button className="btn btn-primary" onClick={routeChanger}>View Video</button>
     </div>
-    { showMore && (
-         <div className="videoPlayer">
-            <div className="player">
-               <iframe className="youtube-player" 
-               type="text/html"
-               width="640"
-               height="385"
-               src={`https://www.youtube.com/embed/${video.id}`}>           
-            </iframe>
-            </div>
-            <form>
-             <h1>Form Goes Here</h1>
-            </form>
-         </div>
-    )}
+
     </>
   
   )
