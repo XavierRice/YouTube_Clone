@@ -2,6 +2,7 @@ const test = console.log
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import './App.css'
+import { SearchHistoryList } from './components/SearchHistoryList';
 
 const secret = import.meta.env.VITE_REACT_APP_API_KEY
 const search = "beyonce"
@@ -17,7 +18,7 @@ const options = {
 function App() {
                                                 // our default could be Bey or just and empty string
   const [searchKey, setSearchKey] = useState("Beyoncé")
-  
+
   const [ allVideos, setAllVideos] = useState([])
   
   useEffect(() => {
@@ -30,13 +31,17 @@ function App() {
   
   test( "This is the Search:", searchKey, "And this is what we get:" , allVideos)
   
-  
+ 
 
+  const [results, setResults] = useState([]);
 
-  return (
-    
-     <h1>Let's go Team!!</h1>
+  return(
+    <div className="App">
+      <div className="search-bar-container">
+        <SearchBar setResults={setResults} />
+        <SearchResultsList results={results}/>
+      </div>
+    </div>
   )
 }
-
 export default App
