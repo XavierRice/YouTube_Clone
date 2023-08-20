@@ -20,20 +20,22 @@ const SearchBar = ({ searchKey, setSearchKey }) => {
         setSearch("")
     };
 
-  
+
     return (
-        <form onSubmit={handleSubmit}>
-            <input
-                id={searchKey}
-                style={{ width: '44rem' }}
-                type="text"
-                name="searchBar"
-                value={search}
-                onChange={handleSearch}
-                placeholder="enter search ie- Beyonce or Tina+Turner"
-            />
-            <button href="#" className="btn btn-primary" type="submit"> Search</button>
-        </form>
+        <div>
+            <form onSubmit={handleSubmit}>
+                <input
+                    id={searchKey}
+                    style={{ width: '44rem' }}
+                    type="text"
+                    name="searchBar"
+                    value={search}
+                    onChange={handleSearch}
+                    placeholder="enter search ie- Beyonce or Tina+Turner"
+                />
+                <button href="#" className="btn btn-primary" type="submit"> Search</button>
+            </form>
+        </div>
     )
 
 

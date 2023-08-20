@@ -26,7 +26,7 @@ import Footer from './Components/Footer.jsx';
 function App() {
                                                 // our default could be Bey or just and empty string
   const [searchKey, setSearchKey] = useState("Beyonce")
-  const [results, setResults] = useState([]);
+  const [results, setResults] = useState([]);    // whats this array for?
   const [ allVideos, setAllVideos] = useState([])
   
   useEffect(() => {
@@ -58,7 +58,7 @@ export default App
 
 
 <div className="search-bar-container">
-        <SearchBar setResults={setResults} />     // I'm moved this out of the app because it wasn't responding when i loaded it. Could you guide me through it? Looks like ur working with a userObj? can u create one if so?
+        <SearchBar setResults={setResults} />     // I'm moved this out of the app because it wasn't responding when i loaded it and there was no seachBar made so i made one, We're you thinking "searchHistory?". Could you guide me through it? Looks like ur working with a userObj? can u create one if so?
         <SearchResultsList results={results}/>
       </div>
 

@@ -11,21 +11,17 @@ const VideoMaker = ({ allVideos, searchKey }) => {
             </div>
         )
 
-    })
+    });
 
 
     return (
 
-        <div className="row row-cols-3">
+        <div className="row row-cols-4">
             <h1>{searchKey}</h1>
             {VideoToRender}
         </div>
     )
 
-
-
-
-
-}
+};
 
 export default VideoMaker;
