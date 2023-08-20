@@ -34,6 +34,7 @@ const VideoPage = ({video}) => {
                     src={`https://www.youtube.com/embed/${video.id}`}>
                 </iframe>
             </div>
+            <div className="fs-3">{video.snippet.title}</div>
             <form>
             <label htmlFor="name">
             Name
