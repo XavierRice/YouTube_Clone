@@ -11,6 +11,7 @@ import './App.css'
 import VideoMaker from './Components/VideoMaker.jsx';
 import SearchBar from './Components/SearchBar.jsx';
 import Footer from './Components/Footer.jsx';
+import NavBar from './Components/NavBar.jsx'
 //import { SearchHistoryList } from './components/SearchHistoryList.jsx';
 
 
@@ -24,28 +25,29 @@ import Footer from './Components/Footer.jsx';
 
 
 function App() {
-                                                // our default could be Bey or just and empty string
-  const [searchKey, setSearchKey] = useState("Beyonce")
+  
+  const [searchKey, setSearchKey] = useState("Beyonce") // our default could be Bey or just and empty string
   const [results, setResults] = useState([]);    // whats this array for?
-  const [ allVideos, setAllVideos] = useState([])
-  
+  const [allVideos, setAllVideos] = useState([])  //set as a prop to the SearchBar component
+
   useEffect(() => {
-  
+
     fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${searchKey}+song&type=video&maxResults=8&key=${secret} `)
-        .then(r => r.json())
-        .then(data => setAllVideos(data))
-        .catch(err => console.log(err))
-  },[searchKey, secret])
-  
-  test( "This is the Search:", searchKey, "And this is what we get:" , allVideos)
-  
-  
+      .then(r => r.json())
+      .then(data => setAllVideos(data))
+      .catch(err => console.log(err))
+  }, [searchKey, secret])
 
+  test("This is the Search:", searchKey, "And this is what we get:", allVideos)
 
-  return(
+  return (
     <div className="App">
-        <h1>Hi Team</h1>
-        <Footer/>
+      <Routes>
+        <Route path='/' element={<h1>Home</h1>} />   {/* this should lead to: header, searchbar and footer */}
+        <Route path='/about' element={<h1>About Us</h1>} /> {/* this should: header, aboutUs and footer  */}
+        <Route path='/search' element={<h1>Search</h1>} /> {/* this should: header, searchBar and footer  */}
+      </Routes>
+
     </div>
   )
 };
@@ -60,12 +62,12 @@ export default App
 <div className="search-bar-container">
         <SearchBar setResults={setResults} />     // I'm moved this out of the app because it wasn't responding when i loaded it and there was no seachBar made so i made one, We're you thinking "searchHistory?". Could you guide me through it? Looks like ur working with a userObj? can u create one if so?
         <SearchResultsList results={results}/>
-      </div>
+</div>
 
- <VideoMaker allVideos={allVideos} searchKey={searchKey}/>
+<VideoMaker allVideos={allVideos} searchKey={searchKey}/>
 <SearchBar searchKey={searchKey} setSearchKey={setSearchKey}/>
-
-
+<Footer/>
+<NabBar/>
 
 
 */
