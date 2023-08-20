@@ -4,7 +4,7 @@ const NavBar = () => {
 
     return (
 
-        <div className="Nav">
+        <div className="navbar bg-light my-2">
             <nav>
                 <Link to="/" >
                     <h3>Home</h3>
@@ -18,7 +18,6 @@ const NavBar = () => {
                     <h3>Search</h3>
                 </Link>
             </nav>
-
         </div>
 
     )

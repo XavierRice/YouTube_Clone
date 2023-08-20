@@ -45,7 +45,9 @@ function App() {
     <div className="App">
 
 
-   
+<SearchBar searchKey={searchKey} setSearchKey={setSearchKey}/>
+<VideoMaker allVideos={allVideos} searchKey={searchKey}/>
+<Footer/>
     </div>
   )
 };

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 
@@ -9,12 +9,12 @@ const VideoPage = ({video}) => {
    const [comment, setComment] = useState("");
    const [name, setName] = useState("")
    
-   function handleComment(){
-       setComment()
+   function handleComment(e){
+       setComment(e.target.value)
     };
     
-    function handleName(){
-        setName()
+    function handleName(e){
+        setName(e.target.value)
     };
     
     function handleSubmit(e){
@@ -22,6 +22,11 @@ const VideoPage = ({video}) => {
         setComment(" ");
         setName(" ")
     };
+
+    useEffect(() => {
+
+
+    }, [video])
 
     return (
 
@@ -64,7 +69,7 @@ const VideoPage = ({video}) => {
             </form>
         </div>
     )
-}
+};
 
 
 export default VideoPage;
