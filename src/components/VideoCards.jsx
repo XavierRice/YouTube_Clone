@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 
 
 const VideoCards = ({ video }) => {
+ console.log(video.id.videoId)
+
   const navigate = useNavigate()
 
   const routeChanger = () => {
@@ -14,7 +16,7 @@ const VideoCards = ({ video }) => {
 
   return (
     
-      <div className="card" style={{ width: '18rem' }} >
+      <div className="card pb-4 pt-10 border border-primary border-5" style={{ width: '18rem' }} >
         <img variant="top" src={video.snippet.thumbnails.medium.url} />
         <div className="card-body">
           <h5 className="card-title">{video.snippet.title}</h5>

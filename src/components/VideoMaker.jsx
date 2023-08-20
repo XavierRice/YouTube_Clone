@@ -1,4 +1,7 @@
-import VideoCards from "./VideoCards.jsx"
+import VideoCards from "./VideoCards.jsx";
+
+
+
 
 const VideoMaker = ({ allVideos, searchKey }) => {
     const videoItems = allVideos?.items || [];
@@ -6,7 +9,7 @@ const VideoMaker = ({ allVideos, searchKey }) => {
     const VideoToRender = videoItems.map(video => {
 
         return (
-            <div className="card-group">
+            <div className="card-group p-2">
                 <VideoCards video={video} />
             </div>
         )

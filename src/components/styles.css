@@ -8,7 +8,7 @@ body {
 .nav{ background-color: #f30000;
     color:white;
     display: flex;
-    justify:space-between;
+    justify-content:space-between;
     align-items: center;
     gap: 2rem ;
     text-decoration: none;

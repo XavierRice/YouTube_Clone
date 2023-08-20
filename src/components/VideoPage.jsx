@@ -31,11 +31,11 @@ const VideoPage = ({video}) => {
                     type="text/html"
                     width="640"
                     height="385"
-                    src={`https://www.youtube.com/embed/${video.id}`}>
+                    src={`https://www.youtube.com/embed/${video.id.videoId}`}>
                 </iframe>
             </div>
             <div className="fs-3">{video.snippet.title}</div>
-            <form>
+            <form onSubmit={handleSubmit}>
             <label htmlFor="name">
             Name
             <input
@@ -60,6 +60,7 @@ const VideoPage = ({video}) => {
               placeholder="Add a brief message..."
             />
           </label>
+          <button type="submit" className="btn btn-secondary">Submit</button>
             </form>
         </div>
     )

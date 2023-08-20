@@ -10,6 +10,7 @@ import './App.css'
 //COMPONENTS///
 import VideoMaker from './Components/VideoMaker.jsx';
 import SearchBar from './Components/SearchBar.jsx';
+import VideoPage from './Components/VideoPage.jsx';
 import Footer from './Components/Footer.jsx';
 import NavBar from './Components/NavBar.jsx'
 //import { SearchHistoryList } from './components/SearchHistoryList.jsx';
@@ -26,7 +27,7 @@ import NavBar from './Components/NavBar.jsx'
 
 function App() {
   
-  const [searchKey, setSearchKey] = useState("Beyonce") // our default could be Bey or just and empty string
+  const [searchKey, setSearchKey] = useState("Tina+Turner") // our default could be Bey or just and empty string
   const [results, setResults] = useState([]);    // whats this array for?
   const [allVideos, setAllVideos] = useState([])  //set as a prop to the SearchBar component
 
@@ -42,12 +43,9 @@ function App() {
 
   return (
     <div className="App">
-      <Routes>
-        <Route path='/' element={<h1>Home</h1>} />   {/* this should lead to: header, searchbar and footer */}
-        <Route path='/about' element={<h1>About Us</h1>} /> {/* this should: header, aboutUs and footer  */}
-        <Route path='/search' element={<h1>Search</h1>} /> {/* this should: header, searchBar and footer  */}
-      </Routes>
 
+
+   
     </div>
   )
 };
@@ -70,4 +68,10 @@ export default App
 <NabBar/>
 
 
-*/
+ <Routes>
+        <Route path='/' element={<h1>Home</h1>} />   {/* this should lead to: header, searchbar and footer */
+   //     <Route path='/about' element={<h1>About Us</h1>} /> {/* this should: header, aboutUs and footer  */}
+  //      <Route path='/search' element={<h1>Search</h1>} /> {/* this should: header, searchBar and footer  */}
+   //   </Routes>
+
+ 
