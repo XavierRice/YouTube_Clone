@@ -7,7 +7,7 @@ const SearchBar = ({ searchKey, setSearchKey }) => {
     const [search, setSearch] = useState("");
     const [searchArray, setSearchArray] = useState([])
 
-    console.log("this is my search", search, "This is the array", searchArray)
+    console.log("this is my search", search, "This is the Search Array", searchArray)
 
     function handleSearch(e) {
         setSearch(e.target.value)
@@ -37,7 +37,7 @@ const SearchBar = ({ searchKey, setSearchKey }) => {
             </form>
         </div>
     )
-
+         {/* Search history goes here maybe? */}
 }
 
 export default SearchBar;

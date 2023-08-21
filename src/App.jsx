@@ -15,7 +15,6 @@ import Footer from './Components/Footer.jsx';
 import Header from './Components/Header.jsx'
 import AboutPage from './Components/AboutPage.jsx';
 
-//import  SearchHistoryList  from './components/SearchHistoryList.jsx';
 
 
 
@@ -47,8 +46,8 @@ function App() {
 
   return (
     <div className="App">
-      
-      
+
+
     </div>
   )
 };
@@ -67,8 +66,8 @@ export default App;
         <SearchResultsList results={results}/>
 </div >
  
-<VideoMaker allVideos={allVideos} searchKey={searchKey}/>
 <SearchBar searchKey={searchKey} setSearchKey={setSearchKey}/>
+<VideoMaker allVideos={allVideos} searchKey={searchKey}/>
 <Footer/>
 <NabBar/>
  
@@ -77,5 +76,6 @@ export default App;
         <Route path='/' element={<h1>Home</h1>} />   this should lead to: header, searchbar and footer
         <Route path='/about' element={ <AboutPage/>} />  <AboutPage/> 
         <Route path='/search' element={<h1>Search</h1>} />  this should: header, searchBar and footer  
+        
       </Routes>
 */

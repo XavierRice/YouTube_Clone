@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
+{/* <Route path=`/video/${video.id.videoId}` element={VideoPage video={video}} />  */}
 
 const VideoPage = ({video}) => {
    
