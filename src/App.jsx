@@ -13,7 +13,7 @@ import SearchBar from './Components/SearchBar.jsx';
 import VideoPage from './Components/VideoPage.jsx';
 import Footer from './Components/Footer.jsx';
 import NavBar from './Components/NavBar.jsx'
-//import { SearchHistoryList } from './components/SearchHistoryList.jsx';
+//import  SearchHistoryList  from './components/SearchHistoryList.jsx';
 
 
 
@@ -26,7 +26,7 @@ import NavBar from './Components/NavBar.jsx'
 
 
 function App() {
-  
+
   const [searchKey, setSearchKey] = useState("Tina+Turner") // our default could be Bey or just and empty string
   const [results, setResults] = useState([]);    // whats this array for?
   const [allVideos, setAllVideos] = useState([])  //set as a prop to the SearchBar component
@@ -45,9 +45,7 @@ function App() {
     <div className="App">
 
 
-<SearchBar searchKey={searchKey} setSearchKey={setSearchKey}/>
-<VideoMaker allVideos={allVideos} searchKey={searchKey}/>
-<Footer/>
+
     </div>
   )
 };
@@ -76,4 +74,3 @@ export default App
   //      <Route path='/search' element={<h1>Search</h1>} /> {/* this should: header, searchBar and footer  */}
    //   </Routes>
 
- 

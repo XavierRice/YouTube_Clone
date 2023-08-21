@@ -24,7 +24,7 @@ const VideoCards = ({ video }) => {
           <h5 className="card-title">{video.snippet.title}</h5>
           <p className="card-text truncate">{video.snippet.description}</p>
         </div>
-        <button className="btn btn-primary" onClick={routeChanger}>View Video</button>
+        <button className="btn btn-primary" onClick={routeChanger}>View Video</button> {/* I want to cut this */}
       </div>
 
   )
