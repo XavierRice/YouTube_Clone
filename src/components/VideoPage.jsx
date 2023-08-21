@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 {/* <Route path=`/video/${video.id.videoId}` element={VideoPage video={video}} />  */}
 
 const VideoPage = ({video}) => {
    
-   const location = useLocation();
+
 
    const [comment, setComment] = useState("");
    const [name, setName] = useState("")
@@ -24,10 +24,6 @@ const VideoPage = ({video}) => {
         setName(" ")
     };
 
-    useEffect(() => {
-
-
-    }, [video])
 
     return (
 

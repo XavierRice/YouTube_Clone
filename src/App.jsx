@@ -14,7 +14,7 @@ import VideoPage from './Components/VideoPage.jsx';
 import Footer from './Components/Footer.jsx';
 import Header from './Components/Header.jsx'
 import AboutPage from './Components/AboutPage.jsx';
-
+import Home from './Components/Home.jsx'
 
 
 
@@ -35,7 +35,7 @@ function App() {
   useEffect(() => {
 
 
-    fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${searchKey}+song&type=video&maxResults=8&key=${secret} `)
+    fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${searchKey}+song&type=video&maxResults=8&key=AIzaSyBZZVdgQxb_e0frPIJurCd_gQwge2PwfsQ `)
       .then(r => r.json())
       .then(data => setAllVideos(data))
       .catch(err => console.log(err))
@@ -46,8 +46,10 @@ function App() {
 
   return (
     <div className="App">
-
-
+      <Routes>
+        <Route path='/' element={<Home searchKey={searchKey} setSearchKey={setSearchKey} allVideos={allVideos} />} />
+        <Route path='/about' element={<AboutPage />} />
+      </Routes>
     </div>
   )
 };
@@ -62,6 +64,7 @@ export default App;
  
  
   < div className = "search-bar-container" >
+
         <SearchBar setResults={setResults} />     // I'm moved this out of the app because it wasn't responding when i loaded it and there was no seachBar made so i made one, We're you thinking "searchHistory?". Could you guide me through it? Looks like ur working with a userObj? can u create one if so?
         <SearchResultsList results={results}/>
 </div >
@@ -72,10 +75,10 @@ export default App;
 <NabBar/>
  
  
- <Routes>
-        <Route path='/' element={<h1>Home</h1>} />   this should lead to: header, searchbar and footer
+       <Routes>
+        <Route path='/' element={<h1>Home</h1>} />   this should lead to: header, searchbar, videmaker and footer
         <Route path='/about' element={ <AboutPage/>} />  <AboutPage/> 
         <Route path='/search' element={<h1>Search</h1>} />  this should: header, searchBar and footer  
-        
+        <Route path=`/video/${video.id.videoId}` element={ VideoPage video={video}}
       </Routes>
 */
