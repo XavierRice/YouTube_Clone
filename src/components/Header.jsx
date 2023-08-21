@@ -3,7 +3,12 @@ import { BrowserRouter as Link } from "react-router-dom"
 const Header = () => {
 
     return (
+
+        <header>
+ 
+
   
+
         <div className="navbar bg-light my-2">
             <nav>
                 <Link to="/" >
@@ -19,8 +24,8 @@ const Header = () => {
                 </Link>
             </nav>
         </div>
-
+</header>
     )
-};
-
+}
+    
 export default Header;
