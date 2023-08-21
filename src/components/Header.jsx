@@ -1,6 +1,6 @@
 import { BrowserRouter as Link } from "react-router-dom"
 
-const NavBar = () => {
+const Header = () => {
 
     return (
  
@@ -23,4 +23,4 @@ const NavBar = () => {
     )
 };
 
-export default NavBar;
+export default Header;

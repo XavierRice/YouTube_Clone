@@ -12,7 +12,7 @@ import VideoMaker from './Components/VideoMaker.jsx';
 import SearchBar from './Components/SearchBar.jsx';
 import VideoPage from './Components/VideoPage.jsx';
 import Footer from './Components/Footer.jsx';
-import NavBar from './Components/NavBar.jsx'
+import Header from './Components/Header.jsx'
 import AboutPage from './Components/AboutPage.jsx';
 
 //import  SearchHistoryList  from './components/SearchHistoryList.jsx';
@@ -48,7 +48,8 @@ function App() {
   return (
     <div className="App">
 
-     <AboutPage/>
+      <SearchBar searchKey={searchKey} setSearchKey={setSearchKey} />
+      <VideoMaker allVideos={allVideos} searchKey={searchKey} />
 
     </div>
   )
