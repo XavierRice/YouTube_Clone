@@ -4,8 +4,6 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 {/* <Route path=`/video/${video.id.videoId}` element={VideoPage video={video}} />  */}
 
 const VideoPage = ({video}) => {
-   
-
 
    const [comment, setComment] = useState("");
    const [name, setName] = useState("")

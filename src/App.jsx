@@ -28,7 +28,7 @@ import Home from './Components/Home.jsx'
 
 function App() {
 
-  const [searchKey, setSearchKey] = useState("Tina+Turner") // our default could be Bey or just and empty string
+  const [searchKey, setSearchKey] = useState("") // our default could be Bey or just and empty string
   const [results, setResults] = useState([]);    // whats this array for?
   const [allVideos, setAllVideos] = useState([])  //set as a prop to the SearchBar component
 
