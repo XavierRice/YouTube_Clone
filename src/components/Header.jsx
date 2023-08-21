@@ -3,7 +3,7 @@ import { BrowserRouter as Link } from "react-router-dom"
 const Header = () => {
 
     return (
- 
+  
         <div className="navbar bg-light my-2">
             <nav>
                 <Link to="/" >

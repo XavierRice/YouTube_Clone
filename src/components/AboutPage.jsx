@@ -41,4 +41,4 @@ import './AboutPage.css'
     </div>)
 }
 
-export default AboutPage
+export default AboutPage;
