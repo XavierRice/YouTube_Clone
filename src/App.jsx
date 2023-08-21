@@ -12,12 +12,15 @@ function App() {
   return (
 
     <div className="App">
-      <div className="searchbar-container">
-        <Searchbar />
-        <div className="">SearchResults</div>
-      </div>
+      <h3> Comment Section </h3>
+      <textarea />
     </div>
   )
 }
 
 export default App
+
+
+{/* <div className="searchbar-container">
+<Searchbar />
+<div className="">SearchResults</div> */}
