@@ -47,35 +47,35 @@ function App() {
 
   return (
     <div className="App">
-
-      <SearchBar searchKey={searchKey} setSearchKey={setSearchKey} />
-      <VideoMaker allVideos={allVideos} searchKey={searchKey} />
-
+      
+      
     </div>
   )
 };
-export default App
+
+
+export default App;
 
 
 //COMPONENTS//
 /*
-
-
-
-<div className="search-bar-container">
+ 
+ 
+ 
+  < div className = "search-bar-container" >
         <SearchBar setResults={setResults} />     // I'm moved this out of the app because it wasn't responding when i loaded it and there was no seachBar made so i made one, We're you thinking "searchHistory?". Could you guide me through it? Looks like ur working with a userObj? can u create one if so?
         <SearchResultsList results={results}/>
-</div>
-
+</div >
+ 
 <VideoMaker allVideos={allVideos} searchKey={searchKey}/>
 <SearchBar searchKey={searchKey} setSearchKey={setSearchKey}/>
 <Footer/>
 <NabBar/>
-
-
+ 
+ 
  <Routes>
-        <Route path='/' element={<h1>Home</h1>} />   {/* this should lead to: header, searchbar and footer */
-   //     <Route path='/about' element={<h1>About Us</h1>} /> {/* this should: header, aboutUs and footer  */}
-  //      <Route path='/search' element={<h1>Search</h1>} /> {/* this should: header, searchBar and footer  */}
-   //   </Routes>
-
+        <Route path='/' element={<h1>Home</h1>} />   this should lead to: header, searchbar and footer
+        <Route path='/about' element={ <AboutPage/>} />  <AboutPage/> 
+        <Route path='/search' element={<h1>Search</h1>} />  this should: header, searchBar and footer  
+      </Routes>
+*/
