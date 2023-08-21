@@ -1,6 +1,6 @@
 const test = console.log
 const secret = import.meta.env.VITE_REACT_APP_API_KEY
-
+import React from "react"
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import './App.css'
@@ -58,7 +58,7 @@ export default App;
 
 
 //COMPONENTS//
-/*
+
  
  
  
@@ -78,4 +78,3 @@ export default App;
         <Route path='/about' element={ <AboutPage/>} />  <AboutPage/> 
         <Route path='/search' element={<h1>Search</h1>} />  this should: header, searchBar and footer  
       </Routes>
-*/
