@@ -6,17 +6,19 @@ const Header = () => {
 
     return (
 
-        <header>
-            <div className="navbar navbar-expand-lg navbar-light bg-light fixed">
+        <header className="fixed" >
+            <div className="navbar navbar-expand-lg navbar-light bg-light ">
                 <div className="container">
                     <nav>
+                        <span>
                         <Link to="/" >
-                            <h3>Home</h3>
+                            <h5>Home</h5>
                         </Link>
 
                         <Link to="/about" >
-                            <h3>About Us</h3>
+                            <h5>About Us</h5>
                         </Link>
+                        </span>
                     </nav>
                     <Routes>
                         <Route path='/' />

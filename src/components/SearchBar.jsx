@@ -31,7 +31,7 @@ const SearchBar = ({ searchKey, setSearchKey }) => {
                     name="searchBar"
                     value={search}
                     onChange={handleSearch}
-                    placeholder="enter search ie- Beyonce or Tina+Turner"
+                    placeholder="search for your favorite artist!"
                 />
                 <button href="#" className="btn btn-primary" type="submit" style={{ marginLeft: '3rem' }}> Search</button>
             </form>

@@ -35,7 +35,7 @@ function App() {
   useEffect(() => {
 
 
-    fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${searchKey}+song&type=video&maxResults=8&key=AIzaSyBZZVdgQxb_e0frPIJurCd_gQwge2PwfsQ `)
+    fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${searchKey}+song&type=video&maxResults=8&key=${secret} `)
       .then(r => r.json())
       .then(data => setAllVideos(data))
       .catch(err => console.log(err))
