@@ -18,3 +18,9 @@ body {
         text-decoration: none;
 
     }
+    header {
+     color:white;
+     display: flex;
+     align-self: auto;
+     
+    }
