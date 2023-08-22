@@ -25,7 +25,7 @@ const SearchBar = ({ searchKey, setSearchKey }) => {
 
     return (
         <div expand="lg" className="fixed" style={{ height: '4rem', backgroundColor: "red", border: "1px solid black" }} >
-            <FaSearch id="search-icon" />
+
             <form onSubmit={handleSubmit}>
                 <input
                     id={searchKey}
@@ -36,7 +36,9 @@ const SearchBar = ({ searchKey, setSearchKey }) => {
                     onChange={handleSearch}
                     placeholder="search for your favorite artist!"
                 />
-                <button href="#" className="btn btn-primary" type="submit" style={{ marginLeft: '3rem' }}> Search</button>
+                <button href="#" className="btn btn-primary" type="submit" style={{ marginLeft: '3rem' }}>
+                    <FaSearch id="search-icon" />
+                </button>
             </form>
         </div>
     )
