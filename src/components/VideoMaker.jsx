@@ -9,7 +9,7 @@ const VideoMaker = ({ allVideos, searchKey }) => {
     const VideoToRender = videoItems.map(video => {
 
         return (
-            <div className="card-group p-2 justify-content-center" style={{ width: '28rem' }}>
+            <div className="card-group p-2 " style={{ width: '28rem' }}>
                 <VideoCards video={video} />
             </div>
         );
@@ -18,7 +18,7 @@ const VideoMaker = ({ allVideos, searchKey }) => {
 
     return (
 
-        <div className="row row-cols-3">
+        <div className="row row-cols-3 g-3 ">
             <h1>{searchKey}</h1>
             {VideoToRender}
         </div>

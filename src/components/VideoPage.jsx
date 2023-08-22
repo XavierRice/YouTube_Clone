@@ -26,7 +26,7 @@ const VideoPage = ({video}) => {
     return (
 
         <div className="videoPlayer">
-            <div className="player">
+            <div className="player" onClick={console.log("here i am")}>
                 <iframe className="youtube-player"
                     type="text/html"
                     width="640"
