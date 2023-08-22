@@ -40,7 +40,7 @@ const VideoPage = () => {
     )
   }) 
 
-  console.log(renderComments)
+  
   return (
 
     <div className="video-responsive"  key={videoId}>
