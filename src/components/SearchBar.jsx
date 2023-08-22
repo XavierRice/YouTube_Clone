@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { FaSearch } from "react-icons/fa";
+import "../components/SearchBar.css"
 
 
 
@@ -22,11 +24,12 @@ const SearchBar = ({ searchKey, setSearchKey }) => {
 
 
     return (
-        <div expand="lg" className="fixed" style={{ height: '4rem', backgroundColor:"red" , border: "1px solid black" }} >
+        <div expand="lg" className="fixed" style={{ height: '4rem', backgroundColor: "red", border: "1px solid black" }} >
+            <FaSearch id="search-icon" />
             <form onSubmit={handleSubmit}>
                 <input
                     id={searchKey}
-                    style={{ width: '44rem', height: "2rem" , padding:"10px 5px 5px", marginTop: "13px", border: "1px solid black" }}
+                    style={{ width: '44rem', height: "2rem", padding: "10px 5px 5px", marginTop: "13px", border: "1px solid black" }}
                     type="text"
                     name="searchBar"
                     value={search}
@@ -37,7 +40,7 @@ const SearchBar = ({ searchKey, setSearchKey }) => {
             </form>
         </div>
     )
-         {/* Search history goes here maybe? */}
+    {/* Search history goes here maybe? */ }
 }
 
 export default SearchBar;
