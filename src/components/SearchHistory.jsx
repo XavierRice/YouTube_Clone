@@ -8,7 +8,7 @@ import "./SearchHistory.css";
     <div 
     className="history-result" 
     onClick={(e) => alert(`You clicked on ${result.name}`)}
-    >
+    >   
     {result.name}
     </div>
   );
