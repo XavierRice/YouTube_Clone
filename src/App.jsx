@@ -36,7 +36,7 @@ function App() {
   useEffect(() => {
 
 
-    fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${searchKey}+song&type=video&maxResults=8&key=${xsecret} `)
+    fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${searchKey}+song&type=video&maxResults=8&key=${secret} `)
       .then(r => r.json())
       .then(data => setAllVideos(data))
       .catch(err => console.log(err))
@@ -49,7 +49,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path='/' element={<Home searchKey={searchKey} setSearchKey={setSearchKey} allVideos={allVideos} />} />
-        <Route path='/about' element={<AboutPage />} />
+        <Route path=':videoId' element={<VideoPage/>}/>
       </Routes>
     </div>
   )

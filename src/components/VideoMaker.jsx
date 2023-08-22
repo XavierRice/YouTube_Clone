@@ -18,7 +18,7 @@ const VideoMaker = ({ allVideos, searchKey }) => {
 
     return (
 
-        <div className="row row-cols-3 g-3 ">
+        <div className="col-sm-4">
             <h1>{searchKey}</h1>
             {VideoToRender}
         </div>

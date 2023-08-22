@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-{/* <Route path=`/video/${video.id.videoId}` element={VideoPage video={video}} />  */}
 
 const VideoPage = ({video}) => {
+  const {videoId} = useParams()
+
+  console.log(videoId)
 
    const [comment, setComment] = useState("");
    const [name, setName] = useState("")
@@ -25,16 +28,15 @@ const VideoPage = ({video}) => {
     return (
 
         <div className="videoPlayer">
-            <div className="player" onClick={console.log("here i am")}>
+            <div className="player" >
                 <iframe className="youtube-player"
                     type="text/html"
                     width="640"
                     height="385"
-                    src={`https://www.youtube.com/embed/${video.id.videoId}`}>
+                    src={`https://www.youtube.com/embed/${`:videoId`}`}>
                 </iframe>
             </div>
-            <div className="fs-3">{video.snippet.title}</div>
-            <form onSubmit={handleSubmit}>
+             <form onSubmit={handleSubmit}>
             <label htmlFor="name">
             Name
             <input
@@ -51,7 +53,7 @@ const VideoPage = ({video}) => {
             Comment
             <input
               id={comment}
-              style={{ width: '44rem' , height: '90rem' , backgroundColor: "slategrey"}}
+              style={{ width: '44rem' , height: '10rem' , backgroundColor: "slategrey"}}
               name="comment"
               type="text"
               value={comment}
@@ -60,7 +62,7 @@ const VideoPage = ({video}) => {
             />
           </label>
           <button type="submit" className="btn btn-secondary">Submit</button>
-            </form>
+            </form>  
         </div>
     )
 };
