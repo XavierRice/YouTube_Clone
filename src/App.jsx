@@ -49,6 +49,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path='/' element={<Home searchKey={searchKey} setSearchKey={setSearchKey} allVideos={allVideos} />} />
+        <Route path='/about' element={ <AboutPage/>} />
         <Route path=':videoId' element={<VideoPage/>}/>
       </Routes>
     </div>

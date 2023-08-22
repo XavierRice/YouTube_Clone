@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
+
 
 
 const VideoPage = ({video}) => {
@@ -31,7 +32,7 @@ const VideoPage = ({video}) => {
             <div className="player" >
                 <iframe className="youtube-player"
                     type="text/html"
-                    width="640"
+                    width="730"
                     height="385"
                     src={`https://www.youtube.com/embed/${`:videoId`}`}>
                 </iframe>

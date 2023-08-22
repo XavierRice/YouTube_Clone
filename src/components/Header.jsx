@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
-import Home from "./Home";
+
 
 
 const Header = () => {
@@ -13,24 +13,18 @@ const Header = () => {
                         <span>
                             <ul>
                                 <li>
-                        <Link to="/" >
-                            <h5>Home</h5>
-                        </Link>
-                       </li>         
-                     </ul>        
-                    <ul>
-                    <li>
-                    <Link to="/about" >
-                    <h5>About Us</h5>
-                    </Link>
-                   </li>                 
-                 </ul>
-                </span>
+                                    <Link to="/" >
+                                        <h5>Home</h5>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/about" >
+                                        <h5>About Us</h5>
+                                    </Link>
+                                </li>
+                            </ul>
+                        </span>
                     </nav>
-                    <Routes>
-                        <Route path='/' />
-                        <Route path='/about' />
-                            </Routes>
                 </div>
             </div>
         </header>
