@@ -28,6 +28,12 @@ The link to my project board is: [https://trello.com/b/FFoPrdFV/youtube-project]
 
 ## Credits
 
+Built by Code Guardian Development Team:
+Natyka Callwood
+Jackie Cheung
+Randy Vargas
+Xavier Rice
+Gaspare Carollo
 
 - Powered by React
 
