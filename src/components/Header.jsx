@@ -1,26 +1,33 @@
-import { BrowserRouter as Link } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
+import Home from "./Home";
+
 
 const Header = () => {
 
     return (
-  
-        <div className="navbar bg-light my-2">
-            <nav>
-                <Link to="/" >
-                    <h3>Home</h3>
-                </Link>
 
-                <Link to="/about" >
-                    <h3>About Us</h3>
-                </Link>
+        <header className="fixed" >
+            <div className="navbar navbar-expand-lg navbar-light bg-light ">
+                <div className="container">
+                    <nav>
+                        <span>
+                        <Link to="/" >
+                            <h5>Home</h5>
+                        </Link>
 
-                <Link to="/search" >
-                    <h3>Search</h3>
-                </Link>
-            </nav>
-        </div>
-
+                        <Link to="/about" >
+                            <h5>About Us</h5>
+                        </Link>
+                        </span>
+                    </nav>
+                    <Routes>
+                        <Route path='/' />
+                        <Route path='/about' />
+                    </Routes>
+                </div>
+            </div>
+        </header>
     )
-};
+}
 
 export default Header;

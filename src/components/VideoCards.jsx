@@ -1,19 +1,10 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+
 import VideoPage from "./VideoPage.jsx";
 
 
 const VideoCards = ({ video }) => {
   console.log(video.id.videoId)
-
-  const navigate = useNavigate()
-
-  const routeChanger = () => {
-    let path = `/video/${video.id.videoId}`
-    let props = { video: video }
-    navigate(path, props)
-  }
-
 
   return (
 
@@ -25,14 +16,19 @@ const VideoCards = ({ video }) => {
         <h5 className="card-title">{video.snippet.title}</h5>
         <p className="card-text truncate">{video.snippet.description}</p>
       </div>
-      <button className="btn btn-primary" onClick={routeChanger}>View Video</button> {/* I want to cut this */}
+
+      <Routes>
+        <Route path={`/video/${video.id.videoId}`} element={<VideoPage video={video} />} />
+      </Routes>
     </div>
+
+
   )
 
 }
 
 {/* <button className="btn btn-primary" onClick={routeChanger}>View Video</button> */ }
-
+{/* <Route path=`/video/${video.id.videoId}` element={ VideoPage video={video}} */ }
 
 
 export default VideoCards; 

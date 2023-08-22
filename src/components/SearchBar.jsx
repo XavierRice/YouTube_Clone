@@ -7,7 +7,7 @@ const SearchBar = ({ searchKey, setSearchKey }) => {
     const [search, setSearch] = useState("");
     const [searchArray, setSearchArray] = useState([])
 
-    console.log("this is my search", search, "This is the array", searchArray)
+    console.log("this is my search", search, "This is the Search Array", searchArray)
 
     function handleSearch(e) {
         setSearch(e.target.value)
@@ -31,13 +31,13 @@ const SearchBar = ({ searchKey, setSearchKey }) => {
                     name="searchBar"
                     value={search}
                     onChange={handleSearch}
-                    placeholder="enter search ie- Beyonce or Tina+Turner"
+                    placeholder="search for your favorite artist!"
                 />
                 <button href="#" className="btn btn-primary" type="submit" style={{ marginLeft: '3rem' }}> Search</button>
             </form>
         </div>
     )
-
+         {/* Search history goes here maybe? */}
 }
 
 export default SearchBar;
