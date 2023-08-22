@@ -1,6 +1,6 @@
 const test = console.log
 const secret = import.meta.env.VITE_REACT_APP_API_KEY
-
+import React from "react"
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import './App.css'
@@ -14,7 +14,11 @@ import VideoPage from './Components/VideoPage.jsx';
 import Footer from './Components/Footer.jsx';
 import Header from './Components/Header.jsx'
 import AboutPage from './Components/AboutPage.jsx';
+<<<<<<< HEAD
 import Home from './Components/Home.jsx'
+=======
+//import  SearchHistoryList  from './Components/SearchHistoryList.jsx';
+>>>>>>> GasparecYT
 
 
 
@@ -46,10 +50,16 @@ function App() {
 
   return (
     <div className="App">
+<<<<<<< HEAD
       <Routes>
         <Route path='/' element={<Home searchKey={searchKey} setSearchKey={setSearchKey} allVideos={allVideos} />} />
         <Route path='/about' element={<AboutPage />} />
       </Routes>
+=======
+      <SearchBar searchKey={searchKey} setSearchKey={setSearchKey} />
+      <VideoMaker allVideos={allVideos} searchKey={searchKey} />
+
+>>>>>>> GasparecYT
     </div>
   )
 };
@@ -59,7 +69,7 @@ export default App;
 
 
 //COMPONENTS//
-/*
+
  
  
  
@@ -81,4 +91,3 @@ export default App;
         <Route path='/search' element={<h1>Search</h1>} />  this should: header, searchBar and footer  
         <Route path=`/video/${video.id.videoId}` element={ VideoPage video={video}}
       </Routes>
-*/

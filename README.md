@@ -13,6 +13,11 @@ DETAILS TO COME
 The build was planned out using project management website Trello.com. 
 The link to my project board is: [https://trello.com/b/FFoPrdFV/youtube-project]
 
+
+## Dependencies
+
+1. npm install react-icons --save
+
 ## Usage
 
 1.
