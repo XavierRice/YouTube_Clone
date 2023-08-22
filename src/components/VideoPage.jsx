@@ -22,7 +22,6 @@ const VideoPage = ({video}) => {
         setName(" ")
     };
 
-
     return (
 
         <div className="videoPlayer">
@@ -52,7 +51,7 @@ const VideoPage = ({video}) => {
             Comment
             <input
               id={comment}
-              style={{ width: '44rem' , height: '90rem' }}
+              style={{ width: '44rem' , height: '90rem' , backgroundColor: "slategrey"}}
               name="comment"
               type="text"
               value={comment}

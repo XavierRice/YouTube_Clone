@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { FaSearch} from 'react-icons/fa'
 
 
 const SearchBar = ({ searchKey, setSearchKey }) => {
@@ -22,22 +22,24 @@ const SearchBar = ({ searchKey, setSearchKey }) => {
 
 
     return (
-        <div expand="lg" className="fixed" style={{ height: '4rem', backgroundColor:"red" , border: "1px solid black" }} >
+        <div expand="lg" className="fixed" style={{ height: '4rem', backgroundColor: "red", border: "1px solid black" }} >
             <form onSubmit={handleSubmit}>
                 <input
                     id={searchKey}
-                    style={{ width: '44rem', height: "2rem" , padding:"10px 5px 5px", marginTop: "13px", border: "1px solid black" }}
+                    style={{ width: '44rem', height: "2rem", padding: "10px 5px 5px", marginTop: "13px", border: "1px solid black" }}
                     type="text"
                     name="searchBar"
                     value={search}
                     onChange={handleSearch}
                     placeholder="search for your favorite artist!"
                 />
-                <button href="#" className="btn btn-primary" type="submit" style={{ marginLeft: '3rem' }}> Search</button>
+                <button href="#" className="btn btn-primary" type="submit" style={{ marginLeft: '3rem' }}> 
+                <FaSearch id="search-icon"/>
+                </button>
             </form>
         </div>
     )
-         {/* Search history goes here maybe? */}
+    {/* Search history goes here maybe? */ }
 }
 
 export default SearchBar;
