@@ -38,7 +38,7 @@ function App() {
   const [searchKey, setSearchKey] = useState("") // our default could be Bey or just and empty string
   const [results, setResults] = useState([]);    // whats this array for?
   const [allVideos, setAllVideos] = useState([])  //set as a prop to the SearchBar component
- 
+
 
   useEffect(() => {
 
@@ -49,7 +49,7 @@ function App() {
       .catch(err => console.log(err))
   }, [searchKey, secret])
 
-  //let { videoId }  = useParams();
+ 
 
 
   test("This is the Search:", searchKey, "And this is what we get:", allVideos)
@@ -59,11 +59,10 @@ function App() {
     <div className="App">
       <>
         <Routes>
-        <Route path='/' element={ <Home searchKey={searchKey} setSearchKey={setSearchKey} allVideos={allVideos}/>} />
-        <Route path='/aboutus' element={ <AboutPage/>} />
-        <Route path=':videoId' element={<VideoPage />} />
-      </Routes>
-
+          <Route path='/' element={<Home searchKey={searchKey} setSearchKey={setSearchKey} allVideos={allVideos} />} />
+          <Route path='/aboutus' element={<AboutPage />} />
+          <Route path=':videoId' element={<VideoPage />} />
+        </Routes>
       </>
     </div>
   )
