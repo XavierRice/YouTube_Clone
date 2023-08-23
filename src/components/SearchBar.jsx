@@ -37,7 +37,7 @@ const SearchBar = ({ searchKey, setSearchKey }) => {
                 <FaSearch id="search-icon"/>
                 </button>
             </form>
-            {/* Search history goes here maybe? */ }
+           
         </div>
     )
 }
