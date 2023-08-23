@@ -18,14 +18,10 @@ console.log(videoId)
         <p className="card-text truncate">{video.snippet.description}</p>
       </div>
     </div>
-
-
   )
 
 }
 
-{/* <button className="btn btn-primary" onClick={routeChanger}>View Video</button> */ }
-{/* <Route path=`/video/${video.id.videoId}` element={ VideoPage video={video}} */ }
 
 
 export default VideoCards; 
