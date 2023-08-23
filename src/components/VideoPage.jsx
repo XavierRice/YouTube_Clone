@@ -2,14 +2,15 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 
-const VideoPage = () => {
-  const { videoId } = useParams()
+const VideoPage = ( props ) => {
+  console.log(props)
+  let {videoId} = useParams()
+  console.log(videoId)
 
   const [comment, setComment] = useState("");
   const [name, setName] = useState("")
   const [note, setNote] = useState([])
 
- 
 
   function handleComment(e) {
     setComment(e.target.value)

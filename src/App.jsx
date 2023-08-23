@@ -3,7 +3,7 @@ const secret = import.meta.env.VITE_REACT_APP_API_KEY
 const xsecret = import.meta.env.VITE_REACT_APP_X_API_KEY
 
 import { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useParams } from "react-router-dom";
 import './App.css'
 
 
@@ -29,6 +29,7 @@ import Home from './Components/Home.jsx'
 
 function App() {
 
+
   const [searchKey, setSearchKey] = useState("") // our default could be Bey or just and empty string
   const [results, setResults] = useState([]);    // whats this array for?
   const [allVideos, setAllVideos] = useState([])  //set as a prop to the SearchBar component
@@ -50,7 +51,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home searchKey={searchKey} setSearchKey={setSearchKey} allVideos={allVideos} />} />
         <Route path='/about' element={ <AboutPage/>} />
-        <Route path=':videoId' element={<VideoPage/>}/>
+        <Route path=":videoId" element={<VideoPage allVideos={allVideos}/>} />
       </Routes>
     </div>
   )
@@ -76,7 +77,8 @@ export default App;
 <Footer/>
 <NabBar/>
  
- 
+ <Route path=':videoId' element={<VideoPage/>}/>
+
        <Routes>
         <Route path='/' element={<h1>Home</h1>} />   this should lead to: header, searchbar, videmaker and footer
         <Route path='/about' element={ <AboutPage/>} />  <AboutPage/> 

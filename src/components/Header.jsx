@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 
-
+{/* style={{ width: '18rem' }} */}
 
 const Header = () => {
 
