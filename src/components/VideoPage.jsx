@@ -1,31 +1,45 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
+const VideoPage = (  ) => {
 
-const VideoPage = () => {
-  const { videoId } = useParams()
+let { videoId }  = useParams();
+
 
   const [comment, setComment] = useState("");
   const [name, setName] = useState("")
   const [note, setNote] = useState([])
 
- 
 
   function handleComment(e) {
+
     setComment(e.target.value)
   };
 
   function handleName(e) {
+
+
+
     setName(e.target.value)
   };
 
   function handleSubmit(e) {
     e.preventDefault();
+
+    if(name||comment === null){
+      alert("You must enter a name & comment")
+      setComment(" ");
+      setName(" ");
+      return null
+    } else {
     
     const newNote = {
       commentor: name,
       comment: comment
-    }
+    }}
+
+    
     setNote([...note, newNote])
     setComment(" ");
     setName(" ")

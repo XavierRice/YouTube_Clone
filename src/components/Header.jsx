@@ -2,6 +2,10 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 import "../components/styles.css";
 
 
+
+{/* style={{ width: '18rem' }} */}
+
+
 const Header = () => {
 
     return (
