@@ -1,10 +1,12 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import './AboutPage.css'
 import Footer from "./Footer";
+import Header from "./Header";
 
 const AboutPage = () => {
     return (
         <>
+        <Header/>
             <div >
                 <h1>We Are The Code Guardians!!!!</h1>
                 <img src='https://avatars.githubusercontent.com/u/128388442?v=4' alt="Gaspare Carollo's profile picture" height='200' width='200' />
