@@ -14,7 +14,6 @@ const Home = ({searchKey, setSearchKey, allVideos}) => {
    <Header/>
    <SearchBar searchKey={searchKey} setSearchKey={setSearchKey}/>
    <VideoMaker allVideos={allVideos} searchKey={searchKey}/>
-   
    <Footer/>
 
    </>

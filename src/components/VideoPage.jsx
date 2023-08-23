@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
+const VideoPage = ( ) => {
 
-const VideoPage = ( props ) => {
-  console.log(props)
-  let {videoId} = useParams()
-  console.log(videoId)
+let { videoId}  = useParams();
+
 
   const [comment, setComment] = useState("");
   const [name, setName] = useState("")

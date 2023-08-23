@@ -3,7 +3,9 @@ const secret = import.meta.env.VITE_REACT_APP_API_KEY
 const xsecret = import.meta.env.VITE_REACT_APP_X_API_KEY
 
 import { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route, useParams } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+
 import './App.css'
 
 
@@ -37,7 +39,7 @@ function App() {
   useEffect(() => {
 
 
-    fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${searchKey}+song&type=video&maxResults=8&key=${secret}`)
+    fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${searchKey}+song&type=video&maxResults=8&key=${xsecret}`)
       .then(r => r.json())
       .then(data => setAllVideos(data))
       .catch(err => console.log(err))
@@ -51,7 +53,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home searchKey={searchKey} setSearchKey={setSearchKey} allVideos={allVideos} />} />
         <Route path='/about' element={ <AboutPage/>} />
-        <Route path=":videoId" element={<VideoPage allVideos={allVideos}/>} />
+        <Route path=':videoId' element={<VideoPage />} />
       </Routes>
     </div>
   )
