@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
+import {IolosPeople} from "react-icons/io"
 
 {/* style={{ width: '18rem' }} */}
 
@@ -19,7 +20,7 @@ const Header = () => {
                                 </li>
                                 <li>
                                     <Link to="/aboutus" >
-                                        <h5>About Us</h5>
+                                        <h5>About <IolosPeople/> Us</h5>
                                     </Link>
                                 </li>
                             </ul>
