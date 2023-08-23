@@ -7,14 +7,17 @@ body {
 
 .nav{ background-color: #f30000;
     color:white;
-    display: flex;
+    display: inline-flex;
     justify-content:space-between;
     align-items: center;
     gap: 2rem ;
     text-decoration: none;
-    padding: 1rem;}
+    padding: 1rem;
+border-style: groove;
+list-style: none;
+}
 
-    .nav a { color: inherit;
+   /* .nav a { color: inherit;
         text-decoration: none;
 
     }
