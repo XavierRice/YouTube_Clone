@@ -8,7 +8,7 @@ const VideoCards = ({ video }) => {
 
   return (
 
-    <div className="card pb-4 pt-10 border border-primary border-5" style={{ width: '18rem' }} >
+    <div className="col-6 col-md-4" style={{ width: '18rem' }} >
       <Link to={`/video/${video.id.videoId}`} >
         <img variant="top" src={video.snippet.thumbnails.medium.url} alt="thunbnail of artist" />
       </Link>
