@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 import "../components/styles.css"
+import { AiFillYoutube } from "react-icons/ai"
 
 {/* style={{ width: '18rem' }} */ }
 
@@ -18,7 +19,7 @@ const Header = () => {
                             <ul>
                                 <li>
                                     <Link to="/" >
-                                        <h5>Home</h5>
+                                        <h5> Ho<AiFillYoutube id="home-icon" />me</h5>
                                     </Link>
                                 </li>
                                 <li>
