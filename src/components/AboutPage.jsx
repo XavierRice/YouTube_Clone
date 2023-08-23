@@ -41,7 +41,7 @@ const AboutPage = () => {
                     <h4>Xavier Rice's Github</h4>
                 </Link>
             </div>
-            <Footer/>
+            
         </>
     )
 }
