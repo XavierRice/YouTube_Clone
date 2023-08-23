@@ -6,6 +6,12 @@ body {
     margin: 0;
 }
 
+
+.nav{ background-color: #f30000;
+    color:white;
+    display: inline-flex;
+    justify-content:space-between;
+
 .fixed {
     border: 5px;
     border-style: inset;
@@ -24,11 +30,6 @@ body {
     position: relative;
     left: -500px;
 
-
-}
-
-.left-element {
-    float: left;
 }
 
 .img-style {
@@ -46,20 +47,10 @@ body {
     gap: 2rem;
     text-decoration: none;
     padding: 1rem;
+
+border-style: groove;
+list-style: none;
 }
-
-.nav a {
-    color: inherit;
-    text-decoration: none;
-
-}
-
-/* header {
-     color:white;
-     display: flex;
-     align-self: auto;
-     
-    } */
 
 @media (max-width: 768px) {
     body {
