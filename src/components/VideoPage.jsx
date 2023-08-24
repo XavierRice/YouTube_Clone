@@ -45,11 +45,11 @@ let { videoId }  = useParams();
   function handleSubmit(e) {
     e.preventDefault();
 
-    if(name||comment === ""){
+    if(name === "" ||comment === ""){
       alert("You must enter a name & comment")
       setComment(" ");
       setName(" ");
-      return null
+      return null;
     } else {
     
     const newNote = {
