@@ -16,7 +16,7 @@ const Header = () => {
                     <div className="video-style" >
                         <img src="./src/assets/74H4.gif" alt="animation of children dancing" width="220px" height="160px" />
                     </div>
-                    <nav className="nav-links">
+                    <nav>
                         <span>
                             <ul>
                                 <li>
