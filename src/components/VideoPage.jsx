@@ -39,15 +39,13 @@ let { videoId }  = useParams();
 
   function handleName(e) {
 
-
-
     setName(e.target.value)
   };
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    if(name||comment === null){
+    if(name||comment === ""){
       alert("You must enter a name & comment")
       setComment(" ");
       setName(" ");
@@ -74,7 +72,6 @@ let { videoId }  = useParams();
     )
   }) 
 
-  
   return (
 
     <div className="video-responsive"  key={videoId}>

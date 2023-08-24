@@ -1,4 +1,5 @@
-*{box-sizing: border-box;
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -10,10 +11,33 @@ body {
     border-style: inset;
 }
 
+
 .container {
 
     background-color: white;
     display: flex;
+}
+
+.nav-links {
+
+    border-style: groove;
+    border-radius: 4px;
+    border-color: blue;
+    background-color: red;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-variant: unset;
+}
+
+.nav-links1 {
+    border-style: groove;
+    border-radius: 4px;
+    border-color: blue;
+    background-color: red;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-variant: unset;
+
 }
 
 .container ul li {
@@ -21,13 +45,22 @@ body {
     display: inline-flex;
     padding-right: 1rem;
     position: relative;
-    left: -500px;
+    left: -400px;
+
+
 }
 
 .img-style {
 
     border-style: none;
     background-color: blue;
+}
+
+.video-style {
+
+    position: relative;
+    top: 0px;
+    left: 440px;
 }
 
 .nav {
@@ -79,10 +112,6 @@ body {
         padding: 5px;
     }
 }
-
-
-
-
 
 
 
