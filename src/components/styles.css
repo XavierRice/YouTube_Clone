@@ -80,13 +80,6 @@ body {
 
 }
 
-/* header {
-     color:white;
-     display: flex;
-     align-self: auto;
-     
-    } */
-
 @media (max-width: 768px) {
     body {
 
@@ -113,7 +106,12 @@ body {
     }
 }
 
+.video-style {
 
+    position: relative;
+    top: 0px;
+    left: 440px;
+}
 
 
 

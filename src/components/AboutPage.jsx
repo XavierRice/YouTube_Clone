@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import './AboutPage.css'
-import Footer from "./Footer";
 import Header from "./Header";
 
 const AboutPage = () => {

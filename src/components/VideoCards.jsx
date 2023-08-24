@@ -1,11 +1,8 @@
-import { useParams } from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 const VideoCards = ({ video }) => {
   
-let videoId = video.id.videoId;
-
-console.log(videoId)
+let videoId = video.id.videoId;  // THIS was the secret sauce that made useParams work!!
 
   return (
 
@@ -20,8 +17,6 @@ console.log(videoId)
     </div>
   )
 
-}
-
-
+};
 
 export default VideoCards; 

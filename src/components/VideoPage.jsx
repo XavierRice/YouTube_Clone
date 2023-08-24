@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
 import { GoThumbsdown, GoThumbsup } from "react-icons/go";
 
 const VideoPage = (  ) => {
@@ -21,8 +21,7 @@ const VideoPage = (  ) => {
              <div> <h4>Likes:{like}Disikes:{dislike}</h4> </div>
         </>
     )
-}
-
+};
 
 let { videoId }  = useParams();
 

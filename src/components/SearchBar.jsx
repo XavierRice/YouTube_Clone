@@ -1,13 +1,10 @@
 import { useState } from "react";
 import { FaSearch} from 'react-icons/fa'
 
-
 const SearchBar = ({ searchKey, setSearchKey }) => {
 
     const [search, setSearch] = useState("");
     const [searchArray, setSearchArray] = useState([])
-
-    console.log("this is my search", search, "This is the Search Array", searchArray)
 
     function handleSearch(e) {
         setSearch(e.target.value)
@@ -19,7 +16,6 @@ const SearchBar = ({ searchKey, setSearchKey }) => {
         setSearchArray([...searchArray, search])
         setSearch("")
     };
-
 
     return (
         <div expand="lg" className="fixed" style={{ height: '4rem', backgroundColor: "red", border: "1px solid black" }} >
@@ -40,6 +36,6 @@ const SearchBar = ({ searchKey, setSearchKey }) => {
            
         </div>
     )
-}
+};
 
 export default SearchBar;

@@ -1,15 +1,9 @@
-import { FaSearch } from "react-icons/fa";
 import VideoCards from "./VideoCards.jsx";
-import VideoPage from "./VideoPage.jsx";
-
-
 
 const VideoMaker = ({ allVideos, searchKey }) => {
     const videoItems = allVideos?.items || [];
 
     const VideoToRender = videoItems.map(video => {
-
-
 
         return (
             <div className="card-group p-1 " style={{width: '28rem', justifySelf: 'center'}}  >
@@ -17,7 +11,6 @@ const VideoMaker = ({ allVideos, searchKey }) => {
             </div>
         );
     });
-
 
     return (
 
