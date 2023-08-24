@@ -33,7 +33,7 @@ let { videoId }  = useParams();
 
 
   function handleComment(e) {
-
+       
     setComment(e.target.value)
   };
 
@@ -45,19 +45,20 @@ let { videoId }  = useParams();
   function handleSubmit(e) {
     e.preventDefault();
 
-    if(name === "" ||comment === ""){
-      alert("You must enter a name & comment")
-      setComment(" ");
+    if(name === ""){
+      alert("You must enter a name")
       setName(" ");
       return null;
+    } else if (comment === "") {
+      alert("You must enter a comment")
+      setComment("")
+      return null;
     } else {
-    
+
     const newNote = {
       commentor: name,
       comment: comment
     }
-
-    
     setNote([...note, newNote])
     setComment(" ");
     setName(" ")
