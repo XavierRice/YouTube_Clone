@@ -55,14 +55,14 @@ let { videoId }  = useParams();
     const newNote = {
       commentor: name,
       comment: comment
-    }}
+    }
 
     
     setNote([...note, newNote])
     setComment(" ");
     setName(" ")
 
-  };
+  }};
 
   const renderComments = note.map( (note, i) => {
     return (
