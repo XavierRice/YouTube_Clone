@@ -16,17 +16,17 @@ const Header = () => {
                     <div className="video-style" >
                         <img src="./src/assets/74H4.gif" alt="animation of children dancing" width="220px" height="160px" />
                     </div>
-                    <nav>
+                    <nav className="nav-links">
                         <span>
                             <ul>
                                 <li>
                                     <Link to="/" >
-                                        <h5> Ho<AiFillYoutube id="home-icon" />me</h5>
+                                        <h5 className="nav-links"> Ho<AiFillYoutube id="home-icon" />me</h5>
                                     </Link>
                                 </li>
                                 <li>
                                     <Link to="/aboutus" >
-                                        <h5>About <TbUsersGroup id="about-us" /> Us</h5>
+                                        <h5 className="nav-links1">About <TbUsersGroup id="about-us" /> Us</h5>
                                     </Link>
                                 </li>
                             </ul>
