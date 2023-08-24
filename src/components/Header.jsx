@@ -13,10 +13,10 @@ const Header = () => {
             <div className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container">
                     <div className="img-style">
-                        <img src={leftLogo} alt="image of a red figure watching the tube" width="310px" height="120" />
+                        <img src={rightLogo} alt="image of a red figure watching the tube" width="310px" height="120" />
                     </div>
                     <div className="video-style" >
-                        <img src={rightLogo} alt="animation of children dancing" width="220px" height="160px" />
+                        <img src={leftLogo} alt="animation of children dancing" width="220px" height="160px" />
                     </div>
                     <nav>
                         <span>
