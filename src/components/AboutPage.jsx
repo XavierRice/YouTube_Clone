@@ -1,10 +1,11 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import './AboutPage.css'
-import Footer from "./Footer";
+import Header from "./Header";
 
 const AboutPage = () => {
     return (
         <>
+        <Header/>
             <div >
                 <h1>We Are The Code Guardians!!!!</h1>
                 <img src='https://avatars.githubusercontent.com/u/128388442?v=4' alt="Gaspare Carollo's profile picture" height='200' width='200' />
@@ -15,21 +16,21 @@ const AboutPage = () => {
                 </Link>
                 <img src="https://avatars.githubusercontent.com/u/131386755?v=4" alt="Jackie Cheung's profile picture" height='200' width='200' />
                 <h2>Jackie Cheung</h2>
-                <p>A little something about ourselves</p>
+                <p>Hi there! I am a software fellow in Pursuit with a background in Community Health Education. I have always been passionate about using technology to make a positive impact on the world, and I believe that technology will change the way we think and use in our daily life.</p>
                 <Link to='https://github.com/JackieC1993/'>
                     <h4>Jackie Cheung's Github</h4>
                 </Link>
                 <img src='https://avatars.githubusercontent.com/u/127881507?v=4' alt="Natyka Callwood's profile picture" height='200' width='200' />
                 <h2>Natyka Callwood</h2>
-                <p>A little something about ourselves</p>
+                <p>Hey!! I am currently a Pursuit fellow, training in Full Stack Web Development. My tenacious, detail oriented, compassionate, and fun loving nature has led me to seek a career in Software Engineering. I hope to take my skills and passions to help develop apps and programs that improve our daily lives and especially improve the lives of those with physical disabilities.</p>
                 <Link to='https://github.com/NatykaC/'>
                     <h4>Natyka Callwood's Github</h4>
                 </Link>
                 <img src='https://avatars.githubusercontent.com/u/131702936?v=4' alt="Randy Vargas' profile picture" height='200' width='200' />
-                <h2>Randy Antonio Vargas</h2>
-                <p>A little something about ourselves</p>
+                <h2>Randy Vargas</h2>
+                <p>Hey whats up! I`m currently a fullstack web development fellow in Pursuit with a background in lingustics and Health Care. I have always been passionate/weird about technology  and using it to make a change in the world, I believe that technology will change the way humanity lives and how we interact with the natural and technical world itself.</p>
                 <Link to='https://github.com/RandyAntonioVargas/'>
-                    <h4>Randy Antonio Vargas' Github</h4>
+                    <h4>Randy Vargas' Github</h4>
                 </Link>
                 <img src='https://avatars.githubusercontent.com/u/126502714?v=4' alt="Xavier Rice's profile picture" height='200' width='200' />
                 <h2>Xavier Rice</h2>
@@ -39,7 +40,7 @@ const AboutPage = () => {
                     <h4>Xavier Rice's Github</h4>
                 </Link>
             </div>
-            <Footer/>
+            
         </>
     )
 }

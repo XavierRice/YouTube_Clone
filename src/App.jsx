@@ -1,13 +1,9 @@
-const test = console.log
 const secret = import.meta.env.VITE_REACT_APP_API_KEY
 const xsecret = import.meta.env.VITE_REACT_APP_X_API_KEY
 const x2secret = import.meta.env.VITE_REACT_APP_X2_API_KEY
 
-
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useParams } from 'react-router-dom';
-
 import './App.css'
 
 
@@ -22,37 +18,19 @@ import AboutPage from './Components/AboutPage.jsx';
 import Home from './Components/Home.jsx'
 
 
-
-// const options = {
-//    method: "GET",
-//    headers: {
-//        "Authorization": `Bearer ${secret}`,
-//    },
-// };
-
-
 function App() {
 
-
-
-  const [searchKey, setSearchKey] = useState("") // our default could be Bey or just and empty string
-  const [results, setResults] = useState([]);    // whats this array for?
-  const [allVideos, setAllVideos] = useState([])  //set as a prop to the SearchBar component
+  const [searchKey, setSearchKey] = useState("") 
+  const [allVideos, setAllVideos] = useState([]) 
 
 
   useEffect(() => {
 
-
-    fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${searchKey}+song&type=video&maxResults=8&key=${x2secret}`)
+    fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${searchKey}+song&type=video&maxResults=8&key=${secret}`)
       .then(r => r.json())
       .then(data => setAllVideos(data))
       .catch(err => console.log(err))
   }, [searchKey, secret])
-
- 
-
-
-  test("This is the Search:", searchKey, "And this is what we get:", allVideos)
 
 
   return (
@@ -67,7 +45,6 @@ function App() {
     </div>
   )
 };
-
 
 export default App;
 

@@ -1,8 +1,6 @@
 import React from 'react'
 import "./SearchHistory.css";
 
-
-
  const SearchHistory = ({result}) => {
   return (
     <div 

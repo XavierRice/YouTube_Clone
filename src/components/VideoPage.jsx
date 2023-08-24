@@ -1,8 +1,27 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
+import { GoThumbsdown, GoThumbsup } from "react-icons/go";
 
 const VideoPage = (  ) => {
+
+  function LikeNDislikes() {
+
+    const [like, setLike] = useState(0)
+    const [dislike, setDislike] = useState(0)
+
+    return (
+        <>
+            <div className="like-style" key="like-button">
+                <button onClick={() => setLike((like) => like + 1)} > <GoThumbsup id="thumbs-up" /> </button >
+            </div >
+            <div className="dislike-style" key="dislike-button">
+                <button onClick={() => setDislike((dislike) => dislike + 1)} > <GoThumbsdown id="thumbs-down" /> </button>
+            </div>
+             <div> <h4>Likes:{like}Disikes:{dislike}</h4> </div>
+        </>
+    )
+};
 
 let { videoId }  = useParams();
 
@@ -19,19 +38,17 @@ let { videoId }  = useParams();
 
   function handleName(e) {
 
-
-
     setName(e.target.value)
   };
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    if(name||comment === null){
+    if(name === "" ||comment === ""){
       alert("You must enter a name & comment")
       setComment(" ");
       setName(" ");
-      return null
+      return null;
     } else {
     
     const newNote = {
@@ -54,7 +71,6 @@ let { videoId }  = useParams();
     )
   }) 
 
-  
   return (
 
     <div className="video-responsive"  key={videoId}>
@@ -99,6 +115,7 @@ let { videoId }  = useParams();
       <div className="box return" style={{ justifyContent:"left" }}>
         {renderComments}
       </div>
+      <LikeNDislikes/>
     </div>
   )
 };

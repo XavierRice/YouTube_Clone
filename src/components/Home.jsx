@@ -3,34 +3,18 @@ import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 import SearchBar from "./SearchBar.jsx";
 import VideoMaker from "./VideoMaker.jsx";
-import VideoPage from "./VideoPage.jsx";
-
 
 const Home = ({ searchKey, setSearchKey, allVideos }) => {
 
-
-
-
-
    return (
-
-
       <>
          <Header />
          <SearchBar searchKey={searchKey} setSearchKey={setSearchKey} />
          <VideoMaker allVideos={allVideos} searchKey={searchKey}/>
          <Footer />
       </>
-
-
    )
+};
 
-
-}
 export default Home;
 
-/* 
-  <Header/>
-      <SearchBar searchKey={searchKey} setSearchKey={setSearchKey}/>
-<VideoMaker allVideos={allVideos} searchKey={searchKey}/>
-*/
