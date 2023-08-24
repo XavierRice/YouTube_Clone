@@ -6,8 +6,6 @@ import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css'
 
-
-
 //COMPONENTS///
 import VideoMaker from './Components/VideoMaker.jsx';
 import SearchBar from './Components/SearchBar.jsx';

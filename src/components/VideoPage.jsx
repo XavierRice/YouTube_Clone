@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-
 import { GoThumbsdown, GoThumbsup } from "react-icons/go";
+import Footer from "./Footer";
+
 
 const VideoPage = (  ) => {
 
@@ -72,7 +73,7 @@ let { videoId }  = useParams();
   }) 
 
   return (
-
+      <>
     <div className="video-responsive"  key={videoId}>
       <div className="player" >
         <iframe className="youtube-player"
@@ -117,6 +118,8 @@ let { videoId }  = useParams();
       </div>
       <LikeNDislikes/>
     </div>
+    <Footer/>
+    </>
   )
 };
 
