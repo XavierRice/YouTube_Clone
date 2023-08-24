@@ -1,6 +1,8 @@
 import {  Link } from "react-router-dom"
 import { TbUsersGroup } from "react-icons/tb"
 import { AiFillYoutube } from "react-icons/ai"
+import leftLogo from "/7454.gif"
+import rightLogo from "/youtube.png"
 import "../components/styles.css";
 
 const Header = () => {
@@ -11,10 +13,10 @@ const Header = () => {
             <div className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container">
                     <div className="img-style">
-                        <img src="./src/assets/youtube.png" alt="image of a red figure watching the tube" width="310px" height="120" />
+                        <img src={leftLogo} alt="image of a red figure watching the tube" width="310px" height="120" />
                     </div>
                     <div className="video-style" >
-                        <img src="./src/assets/74H4.gif" alt="animation of children dancing" width="220px" height="160px" />
+                        <img src={rightLogo} alt="animation of children dancing" width="220px" height="160px" />
                     </div>
                     <nav>
                         <span>
