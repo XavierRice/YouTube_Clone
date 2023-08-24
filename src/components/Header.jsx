@@ -1,8 +1,8 @@
 import {  Link } from "react-router-dom"
 import { TbUsersGroup } from "react-icons/tb"
 import { AiFillYoutube } from "react-icons/ai"
-import leftLogo from "/7454.gif"
-import rightLogo from "/youtube.png"
+import leftLogo from "../74H4.gif"
+import rightLogo from "../youtube.png"
 import "../components/styles.css";
 
 const Header = () => {
