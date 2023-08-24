@@ -7,19 +7,19 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css'
 
 //COMPONENTS///
-import VideoMaker from './Components/VideoMaker.jsx';
-import SearchBar from './Components/SearchBar.jsx';
-import VideoPage from './Components/VideoPage.jsx';
-import Footer from './Components/Footer.jsx';
-import Header from './Components/Header.jsx'
-import AboutPage from './Components/AboutPage.jsx';
-import Home from './Components/Home.jsx'
+import VideoMaker from './components/VideoMaker.jsx';
+import SearchBar from './components/SearchBar.jsx';
+import VideoPage from './components/VideoPage.jsx';
+import Footer from './components/Footer.jsx';
+import Header from './components/Header.jsx'
+import AboutPage from './components/AboutPage.jsx';
+import Home from './components/Home.jsx'
 
 
 function App() {
 
-  const [searchKey, setSearchKey] = useState("") 
-  const [allVideos, setAllVideos] = useState([]) 
+  const [searchKey, setSearchKey] = useState("")
+  const [allVideos, setAllVideos] = useState([])
 
 
   useEffect(() => {
