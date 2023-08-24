@@ -1,5 +1,5 @@
 import {  Link } from "react-router-dom"
-import { TbUsersGroup } from "react-icons/Tb"
+import { TbUsersGroup } from "react-icons/tb"
 import { AiFillYoutube } from "react-icons/ai"
 import "../components/styles.css";
 
