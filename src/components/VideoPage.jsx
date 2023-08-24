@@ -14,12 +14,12 @@ const VideoPage = () => {
     return (
       <>
         <div className="like-style" key="like-button">
-          <button onClick={() => setLike((like) => like + 1)} > <GoThumbsup id="thumbs-up" /> </button >
+          <button onClick={() => setLike((like) => like + 1)} > <GoThumbsup id="thumbs-up" size={40} /> </button >
         </div >
         <div className="dislike-style" key="dislike-button">
-          <button onClick={() => setDislike((dislike) => dislike + 1)} > <GoThumbsdown id="thumbs-down" /> </button>
+          <button onClick={() => setDislike((dislike) => dislike + 1)} > <GoThumbsdown id="thumbs-down" size={40} /> </button>
         </div>
-        <div> <h4>Likes:{like}Disikes:{dislike}</h4> </div>
+        <div > <h5>Dislikes: {dislike}  Likes: {like}</h5> </div>
       </>
     )
   };
