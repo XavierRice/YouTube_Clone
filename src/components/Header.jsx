@@ -10,7 +10,7 @@ const Header = () => {
     return (
 
         <header className="fixed">
-            <div className="navbar navbar-expand-lg navbar-light bg-light">
+            <div className="navbar navbar-expand-lg navbar-light bg-light"> {/* The bootstrap took some getting use too. Setting to "fixed-top" made the header the top/length of the page but cut out the search bar */}
                 <div className="container">
                     <div className="img-style">
                         <img src={rightLogo} alt="image of a red figure watching the tube" width="310px" height="120" />

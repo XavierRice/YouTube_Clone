@@ -1,4 +1,4 @@
-const secret = import.meta.env.VITE_REACT_APP_API_KEY
+const secret = import.meta.env.VITE_REACT_APP_API_KEY                        // the very first thing we did as a group was write the fetch and we went over quota alot so we got three to use.
 const xsecret = import.meta.env.VITE_REACT_APP_X_API_KEY
 const x2secret = import.meta.env.VITE_REACT_APP_X2_API_KEY
 
@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css'
 
 //COMPONENTS///
-import VideoMaker from './components/VideoMaker.jsx';
+import VideoMaker from './components/VideoMaker.jsx';                    // this gives the red squiggles of terror because of the "C"/"c" issue and deploying with Netlify
 import SearchBar from './components/SearchBar.jsx';
 import VideoPage from './components/VideoPage.jsx';
 import Footer from './components/Footer.jsx';
@@ -35,7 +35,7 @@ function App() {
     <div className="App">
       <>
         <Routes>
-          <Route path='/' element={<Home searchKey={searchKey} setSearchKey={setSearchKey} allVideos={allVideos} />} />
+          <Route path='/' element={<Home searchKey={searchKey} setSearchKey={setSearchKey} allVideos={allVideos} />} />   
           <Route path='/aboutus' element={<AboutPage />} />
           <Route path=':videoId' element={<VideoPage />} />
         </Routes>

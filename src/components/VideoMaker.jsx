@@ -1,6 +1,6 @@
 import VideoCards from "./VideoCards.jsx";
 
-const VideoMaker = ({ allVideos, searchKey }) => {
+const VideoMaker = ({ allVideos, searchKey }) => {        //when our fetch wasn't responding the map would throw err so i added a ternary to set the video items to an arry if nothing is available.
     const videoItems = allVideos?.items || [];
 
     const VideoToRender = videoItems.map(video => {

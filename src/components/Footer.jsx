@@ -5,7 +5,7 @@ const Footer = () => {
     return (
 
         <footer>
-            <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom bg-danger fixed-bottom' style={{ height: '2rem' }}>
+            <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom bg-danger fixed-bottom' style={{ height: '2rem' }}>    
                 <Link to="/" >
                     <p>Home</p>
                 </Link>

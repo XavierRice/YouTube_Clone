@@ -24,12 +24,12 @@ const VideoPage = () => {
     )
   };
 
-  let { videoId } = useParams();
+  let { videoId } = useParams();           // a hook that pulls information from a url. (when i set the value correctly)
 
 
-  const [comment, setComment] = useState("");
-  const [name, setName] = useState("")
-  const [note, setNote] = useState([])
+  const [comment, setComment] = useState("");    // a state for the comment.
+  const [name, setName] = useState("")          // and name
+  const [note, setNote] = useState([])          // and the comment/name as a whole
 
 
   function handleComment(e) {
@@ -46,7 +46,7 @@ const VideoPage = () => {
     e.preventDefault();
 
     if (name === "") {
-      alert("You must enter a name")
+      alert("You must enter a name")                     
       setName(" ");
       return null;
     } else if (comment === "") {
@@ -86,7 +86,7 @@ const VideoPage = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture "
             allowFullScreen
             title="Embedded youtube"
-            src={`https://www.youtube.com/embed/${videoId}`}
+            src={`https://www.youtube.com/embed/${videoId}`}                                       
           />
         </div>
         <form onSubmit={handleSubmit}>
@@ -123,7 +123,6 @@ const VideoPage = () => {
           <LikeNDislikes />
         </div>
       </div>
-
     </>
   )
 };

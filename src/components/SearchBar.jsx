@@ -13,12 +13,12 @@ const SearchBar = ({ searchKey, setSearchKey }) => {
     function handleSubmit(e) {
         e.preventDefault();
         setSearchKey(search)
-        setSearchArray([...searchArray, search])
+        setSearchArray([...searchArray, search])         // using the spread op to add the search into the array. As a stretch goal we were working towards listing out the seach histroy but we didnt have time to organize it.
         setSearch("")
     };
 
     return (
-        <div expand="lg" className="fixed" style={{ height: '4rem', backgroundColor: "red", border: "1px solid black" }} >
+        <div expand="lg" className="fixed" style={{ height: '4rem', backgroundColor: "red", border: "1px solid black" }} >  {/* we did a combination of inline styling and css along with bootstrap*/}
             <form onSubmit={handleSubmit}>
                 <input
                     id={searchKey}

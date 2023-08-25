@@ -8,8 +8,8 @@ const Home = ({ searchKey, setSearchKey, allVideos }) => {
 
    return (
       <>
-         <Header />
-         <SearchBar searchKey={searchKey} setSearchKey={setSearchKey} />
+         <Header />                                                      
+         <SearchBar searchKey={searchKey} setSearchKey={setSearchKey} />    {/* I know a reworking of the fetch was recommened here. We passed information through props instead of one massive component */}
          <VideoMaker allVideos={allVideos} searchKey={searchKey}/>
          <Footer />
       </>
@@ -18,3 +18,4 @@ const Home = ({ searchKey, setSearchKey, allVideos }) => {
 
 export default Home;
 
+  
